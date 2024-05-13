@@ -4,11 +4,11 @@ public class PerfectArrayDoWhileLoop {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int sumBefore, sumAfter;
-        int i =1, j=0;
+        int i = 1, j = 0;
         do {
             sumBefore = 0;
             sumAfter = 0;
-            j=0;
+            j = 0;
             do {
                 if (j < i) {
                     sumBefore += arr[j];
