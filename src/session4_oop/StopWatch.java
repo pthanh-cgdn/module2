@@ -38,7 +38,7 @@ public class StopWatch {
             isStopped = input.nextBoolean();
             if (isStopped) {
                 AppleWatch.stop();
-                System.out.println("Your time is : " + AppleWatch.getElapsedTime());
+                System.out.println("Your time is : " + AppleWatch.getElapsedTime()+" milliseconds");
             }
         }
     }
