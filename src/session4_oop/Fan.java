@@ -42,12 +42,14 @@ public class Fan {
     public String getColor() {
         return this.color;
     }
-    public Fan(){
+
+    public Fan() {
 
     }
+
     public String toString() {
         if (this.on) {
-            return "Fan is on, speed = "+ this.speed + ", radius = "+ this.radius + ", color = "+ this.color;
+            return "Fan is on, speed = " + this.speed + ", radius = " + this.radius + ", color = " + this.color;
         } else {
             return "Fan is off";
         }
@@ -58,12 +60,12 @@ public class Fan {
         Scanner input = new Scanner(System.in);
         System.out.println("Turn fan on???");
         fan.setOn(input.nextBoolean());
+        System.out.println("Enter the speed: ");
+        fan.setSpeed(input.nextByte());
         System.out.println("Enter the radius of the fan: ");
         fan.setRadius(input.nextDouble());
         System.out.println("Enter the color of the fan: ");
         fan.setColor(input.next());
-        System.out.println("Enter the speed: ");
-        fan.setSpeed(input.nextByte());
         System.out.println(fan.toString());
     }
 }
