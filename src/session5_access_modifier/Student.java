@@ -16,7 +16,7 @@ public class Student {
         this.name = name;
     }
     public void setClasses(String classes) {
-        this.classes = classes;
+        Student.classes = classes;
     }
     //static method to change the value of static variable
     static void change() {

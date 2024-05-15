@@ -35,24 +35,28 @@ public class MovablePoint extends Point2D {
     public void setySpeed(float ySpeed) {
         this.ySpeed = ySpeed;
     }
+
     public void setSpeed(float xSpeed, float ySpeed) {
         setxSpeed(xSpeed);
         setySpeed(ySpeed);
     }
-    public float[] getSpeed(){
+
+    public float[] getSpeed() {
         return new float[]{getxSpeed(), getySpeed()};
     }
-    public String toString(){
-        return "("+getX()+","+getY()+"),speed=("+getxSpeed()+","+getySpeed()+")";
+
+    public String toString() {
+        return "(" + getX() + "," + getY() + "),speed=(" + getxSpeed() + "," + getySpeed() + ")";
     }
-    public MovablePoint move(){
-        setX(getX()+xSpeed);
-        setY(getY()+ySpeed);
+
+    public MovablePoint move() {
+        setX(getX() + xSpeed);
+        setY(getY() + ySpeed);
         return this;
     }
 
     public static void main(String[] args) {
-        MovablePoint m = new MovablePoint(5,5,1,1);
+        MovablePoint m = new MovablePoint(5, 5, 1, 1);
         System.out.println(m.toString());
         m.move();
         System.out.println(m.toString());

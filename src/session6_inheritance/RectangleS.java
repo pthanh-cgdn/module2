@@ -1,6 +1,6 @@
 package session6_inheritance;
 
-public class RectangleS extends Shape{
+public class RectangleS extends Shape {
     private double width;
     private double height;
 
@@ -35,13 +35,16 @@ public class RectangleS extends Shape{
     public void setHeight(double height) {
         this.height = height;
     }
+
     public double getArea() {
         return width * height;
     }
+
     public double getPerimeter() {
         return 2 * width + 2 * height;
     }
-    public String toString(){
-        return "A Rectangle with width="+this.width+" and length="+this.height+", which is a subclass of "+super.toString();
+
+    public String toString() {
+        return "A Rectangle with width=" + this.width + " and length=" + this.height + ", which is a subclass of " + super.toString();
     }
 }

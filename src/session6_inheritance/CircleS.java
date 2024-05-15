@@ -1,6 +1,6 @@
 package session6_inheritance;
 
-public class CircleS extends Shape{
+public class CircleS extends Shape {
     private double radius;
 
     public CircleS() {
@@ -24,13 +24,15 @@ public class CircleS extends Shape{
         this.radius = radius;
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         return 2 * Math.PI * radius;
     }
+
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
     public String toString() {
-        return "A Circle with perimeter="+this.getPerimeter()+", which is a subclass of "+super.toString();
+        return "A Circle with perimeter=" + this.getPerimeter() + ", which is a subclass of " + super.toString();
     }
 }

@@ -1,6 +1,6 @@
 package session6_inheritance;
 
-public class Triangle extends Shape{
+public class Triangle extends Shape {
     private double side1;
     private double side2;
     private double side3;
@@ -28,20 +28,23 @@ public class Triangle extends Shape{
     public double getSide3() {
         return side3;
     }
-    public double getArea(){
-        double p = (this.side1+this.side2+this.side3)/2;
-        return Math.pow(p*(p-this.side1)*(p-this.side2)*(p-this.side3),0.5);
+
+    public double getArea() {
+        double p = (this.side1 + this.side2 + this.side3) / 2;
+        return Math.pow(p * (p - this.side1) * (p - this.side2) * (p - this.side3), 0.5);
     }
-    public double getPerimeter(){
-        return  this.side1+this.side2+this.side3;
+
+    public double getPerimeter() {
+        return this.side1 + this.side2 + this.side3;
     }
-    public String toString(){
-        return "A triangle with three sides: "+this.side1+", "+this.side2+", "+this.side3+".";
+
+    public String toString() {
+        return "A triangle with three sides: " + this.side1 + ", " + this.side2 + ", " + this.side3 + ".";
     }
 
     public static void main(String[] args) {
-        Triangle triangle = new Triangle(3,4,5);
+        Triangle triangle = new Triangle(3, 4, 5);
         System.out.println(triangle.toString());
-        System.out.println("The Areas of this Triagle is: "+triangle.getArea());
+        System.out.println("The Areas of this Triagle is: " + triangle.getArea());
     }
 }

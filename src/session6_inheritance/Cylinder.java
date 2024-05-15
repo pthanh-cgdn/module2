@@ -1,6 +1,6 @@
 package session6_inheritance;
 
-public class Cylinder extends CircleS{
+public class Cylinder extends CircleS {
     private double height;
 
     public Cylinder() {
@@ -23,11 +23,13 @@ public class Cylinder extends CircleS{
     public void setHeight(double height) {
         this.height = height;
     }
-    public double getArea(){
-        return super.getArea()*2+super.getPerimeter()*Math.PI*this.height;
+
+    public double getArea() {
+        return super.getArea() * 2 + super.getPerimeter() * Math.PI * this.height;
     }
+
     public double getVolume() {
-        return super.getArea()*this.height;
+        return super.getArea() * this.height;
     }
 
     @Override
