@@ -34,6 +34,6 @@ public class Cylinder extends CircleS {
 
     @Override
     public String toString() {
-        return "A cyclinder wi;th height " + height + " and area " + getArea() + " and volume " + getVolume();
+        return "A cylinder wi;th height " + height + " and area " + getArea() + " and volume " + getVolume();
     }
 }
