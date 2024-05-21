@@ -13,7 +13,7 @@ public class TennisGame {
             int player1CompareToPlayer2 = player1Score - player2Score;
             if (player1CompareToPlayer2 > 0) {
                 if (player1CompareToPlayer2 > 1) {
-                    scoreBoard = "Win player1";
+                    scoreBoard = "Win for player1";
                 } else {
                     scoreBoard = "Advantage for player1";
                 }
@@ -42,6 +42,6 @@ public class TennisGame {
 
     public static void main(String[] args) {
         TennisGame tennisGame = new TennisGame();
-        System.out.println(getScore(6, 8));
+        System.out.println(getScore(2, 3));
     }
 }
