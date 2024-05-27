@@ -18,6 +18,10 @@ class MathUtil {
 }
 
 class Calculator extends MathUtil {
+    public Calculator() {
+    }
+
+
     public static int multiply(int a, int b) {
         return a * b;
     }

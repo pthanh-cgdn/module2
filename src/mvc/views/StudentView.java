@@ -64,4 +64,33 @@ public class StudentView {
     public void showMessage(String str) {
         System.out.println(str);
     }
+
+    public int viewEdit() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input student's code you want to edit: ");
+        int code = Integer.parseInt(scanner.nextLine());
+        return code;
+    }
+
+    public Student viewEdit(Student student) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Edit code: current code = "+student.getCode()+" :");
+        int code = Integer.parseInt(scanner.nextLine());
+        System.out.println("Input name: current name = "+student.getName()+" :");
+        String name = scanner.nextLine();
+        System.out.println("Input address: current address = "+student.getAddress()+" :");
+        String address = scanner.nextLine();
+        System.out.print("Input classroom: current classroom = "+student.getClassroom()+" :");
+        String classroom = scanner.nextLine();
+        return new Student(code, name, address, classroom);
+    }
+
+    public boolean confirmEdit(Student student) {
+        System.out.println("Do you want to edit information of student, code: "+student.getCode()+", name: "+student.getName()+" ?");
+        System.out.println("Input Y to confirm");
+        System.out.println("Input N to cancel");
+        Scanner scanner = new Scanner(System.in);
+        String choice = scanner.nextLine();
+        return choice.equals("Y");
+    }
 }
