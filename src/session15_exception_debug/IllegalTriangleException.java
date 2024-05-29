@@ -13,10 +13,10 @@ public class IllegalTriangleException {
         System.out.print("Enter third sides of triangle: ");
         int side3 = input.nextInt();
         if (side1 < 0 || side2 < 0 || side3 < 0) {
-            throw new InputMismatchException();
+            throw new InputMismatchException("side could not be negative");
         }
         if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
-            throw new Exception();
+            throw new Exception("sides length is illegal");
         }
     }
 
@@ -26,6 +26,8 @@ public class IllegalTriangleException {
             System.out.println("Your triangle is valid");
         } catch (InputMismatchException e) {
             System.out.println("Invalid input value");
+            e.getCause();
+            e.printStackTrace();
         } catch (Exception e) {
             System.out.println("Invalid triangle");
         }

@@ -1,0 +1,4 @@
+2
+3
+7
+Max value is: 7

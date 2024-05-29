@@ -5,7 +5,6 @@ import mvc.models.Student;
 import java.util.Scanner;
 
 public class StudentView {
-
     public int view() {
         System.out.println("--------Student View--------");
         System.out.println("1. Add student");
@@ -13,9 +12,16 @@ public class StudentView {
         System.out.println("3. Delete student");
         System.out.println("4. Display all student");
         System.out.println("0. End program");
-        System.out.println("Input your choice: ");
         Scanner scanner = new Scanner(System.in);
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice = -1;
+        do{
+        try {
+            System.out.println("Input your choice: ");
+            choice = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a number");
+        }
+        } while (choice <0 || choice > 5);
         return choice;
 
     }

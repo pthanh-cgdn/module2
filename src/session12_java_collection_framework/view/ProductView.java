@@ -13,16 +13,30 @@ public class ProductView {
         System.out.println("3. Delete product");
         System.out.println("4. Display all product");
         System.out.println("0. End program");
-        System.out.println("Input your choice: ");
         Scanner scanner = new Scanner(System.in);
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice = -1;
+        do {
+            try{
+                System.out.println("Input your choice: ");
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch(NumberFormatException e){
+                System.out.println("Please enter a number");
+            }
+        } while (choice <0 || choice >5);
         return choice;
     }
 
     public Product viewAdd() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter product id: ");
-        int productId = Integer.parseInt(scanner.nextLine());
+        int productId=-1;
+        do {
+            try {
+                System.out.println("Please enter product id: ");
+                productId = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a number");
+            }
+        } while(productId < 0);
         System.out.println("Please enter product name: ");
         String productName = scanner.nextLine();
         System.out.println("Please enter product price: ");
