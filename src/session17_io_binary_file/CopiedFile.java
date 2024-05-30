@@ -1,7 +1,6 @@
 package session17_io_binary_file;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class CopiedFile {
     private static void copyFileUsingStream(File source, File dest) throws IOException {
@@ -21,11 +20,9 @@ public class CopiedFile {
         }
     }
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.printf("Enter source file:");
-        String sourcePath = scanner.nextLine();
-        System.out.printf("Enter destination file:");
-        String destPath = scanner.nextLine();
+
+        String sourcePath = "src/session17_io_binary_file/data/scores.txt";
+        String destPath = "src/session17_io_binary_file/data/copy.txt";
 
         File sourceFile = new File(sourcePath);
         File destFile = new File(destPath);

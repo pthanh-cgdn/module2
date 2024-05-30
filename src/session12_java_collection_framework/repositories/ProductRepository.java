@@ -131,4 +131,32 @@ public class ProductRepository {
         }
         return products;
     }
+    public void writeDataToType(String path, ArrayList<Product> products){
+        try {
+            FileOutputStream op = new FileOutputStream(path);
+            ObjectOutputStream os = new ObjectOutputStream(op);
+            os.writeObject(products);
+            os.close();
+            op.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error opening file");
+        }
+    }
+    public ArrayList<Product> readDataFromFile(String path) {
+        ArrayList<Product> products = null;
+        try {
+            FileInputStream in = new FileInputStream(path);
+            ObjectInputStream ois = new ObjectInputStream(in);
+            products = (ArrayList<Product>) ois.readObject();
+            in.close();
+            ois.close();
+        } catch (IOException e) {
+            System.out.println("Error opening file");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Class not found");
+        }
+        return products;
+    }
 }
