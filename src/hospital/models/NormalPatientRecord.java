@@ -1,7 +1,5 @@
 package hospital.models;
 
-import java.util.Date;
-
 public class NormalPatientRecord extends PatientRecord {
     private int cost;
 

@@ -42,11 +42,11 @@ public class View {
         do {
             System.out.println("Vui lòng nhập ngày nhập viện (định dạng DD/MM/YYYY");
             inDate = scanner.nextLine();
-        }while(!inDate.matches("[0-3][0-9]/[0-1][0-2]/20[0-2][0-9]"));
+        }while(!inDate.matches("[0-3][0-9]/[0-1][0-9]/20[0-2][0-9]"));
         do {
             System.out.println("Vui lòng nhập ngày xuất viện");
             outDate = scanner.nextLine();
-        } while(!outDate.matches("[0-3][0-9]/[0-1][0-2]/20[0-2][0-9]") || !compare(outDate,inDate));
+        } while(!outDate.matches("[0-3][0-9]/[0-1][0-9]/20[0-2][0-9]") || !compare(outDate,inDate));
         System.out.println("Vui lòng nhập lý do nhập viện");
         reason = scanner.nextLine();
         System.out.println("Có phải là bệnh nhân VIP không (ấn Y để chọn Yes)?");
@@ -59,7 +59,7 @@ public class View {
             do {
                 System.out.println("Vui lòng nhập thời hạn gói Vip");
                 vipEnd = scanner.nextLine();
-            } while(!vipEnd.matches("[0-3][0-9]/[0-1][0-2]/20[0-2][0-9]"));
+            } while(!vipEnd.matches("[0-3][0-9]/[0-1][0-9]/20[0-2][0-9]"));
             return new VipPatientRecord(recordNumber, patientNumber, name, inDate, outDate, reason, vipType, vipEnd);
         } else {
             System.out.println("Vui lòng nhập chi phí chữa bệnh");
